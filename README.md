@@ -74,9 +74,22 @@ memory / `sessionStorage` only — never persisted to disk, never sent to any
 server we control.
 
 ## Project layout
-See `.kiro/steering/structure.md`. The spec (requirements/design/tasks) is in
-`.kiro/specs/club-lights-mvp/`.
+
+```
+src/
+  app/            routes, screens, shared background
+  components/     UI kit (buttons, icons, hero, card grid)
+  features/
+    auth/         Spotify PKCE flow + auth store
+    player/       Web Playback SDK wrapper, Web API, queue/search UI
+    audio/        audio sources, analyser, beat detector
+    lights/       scene classes, auto-director, renderer, flash gate
+  store/          Zustand stores (player, preferences)
+  lib/            color extraction, platform detection
+  styles/         Tailwind theme tokens + global styles
+  types.ts        shared types (AudioFeatures, AudioSource, Scene, Palette)
+```
 
 ## Roadmap
-Phase 2: shared party rooms (join a room, queue + vote on tracks, synced lights)
-using the ERD in the project context doc. Not started.
+Phase 2: shared party rooms (join a room, queue + vote on tracks, synced lights).
+Not started.

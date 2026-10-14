@@ -2,9 +2,9 @@
 
 ```
 club-lights/
-  .kiro/
-    specs/club-lights-mvp/   requirements.md, design.md, tasks.md
-    steering/                product.md, tech.md, structure.md
+  docs/
+    spec/                    requirements.md, design.md, tasks.md
+    product.md, tech.md, structure.md
   public/                    favicon, static assets
   index.html
   src/
